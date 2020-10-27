@@ -6,7 +6,7 @@ check_admin();
 // 2 en camino
 // 3 despachado
 
-$s = $mysqli->query("SELECT * FROM compra WHERE estado != 3");
+$s = $mysqli->query("SELECT * FROM compra WHERE estado != 4");
 
 if(isset($eliminar)){
 	$eliminar = clear($eliminar);
@@ -27,6 +27,8 @@ if(isset($eliminar)){
         <tr>
             <th>Cliente</th>
             <th>Correo</th>
+            <th>Vendedor</th>
+            <th>Direcciòn</th>
             <th>Celular</th>
             <th>Fecha</th>
             <th>Monto</th>
@@ -40,6 +42,7 @@ if(isset($eliminar)){
 		$rc = mysqli_fetch_array($sc);
 		$cliente = $rc['name'];
 		$email = $rc['email'];
+		$vendedor = $rc['vendedor'];
 		$celular = $rc['celular'];
 
 
@@ -51,17 +54,22 @@ if(isset($eliminar)){
 			$status = "Despachando";
 		}elseif($r['estado'] == 3){
 			$status = "Finalizado";
+		}elseif($r['estado'] == 4){
+			$status = "Finalizado";
 		}else{
 			$status = "Indefinido";
 		}
 
 		$fecha = fecha($r['fecha']);
+		$direccion = $r['direccion'];
 
 
 		?>
         <tr>
             <td><?=$cliente?></td>
             <td><?=$email?></td>
+            <td><?=$vendedor?></td>
+            <td><?=$direccion?></td>
             <td><?=$celular?></td>
             <td><?=$fecha?></td>
             <td>$<?=$r['monto']?></td>

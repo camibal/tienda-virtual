@@ -1,27 +1,27 @@
 <?php
 check_admin();
 
-if(isset($enviar)){
-	$name = clear($name);
-	$price = clear($price);
-	$oferta = clear($oferta);
-	$descargable = clear($descargable);
-	$categoria = clear($categoria);
+if (isset($enviar)) {
+    $name = clear($name);
+    $price = clear($price);
+    $oferta = clear($oferta);
+    $descargable = clear($descargable);
+    $categoria = clear($categoria);
 
-	$imagen = "";
+    $imagen = "";
 
-	if(is_uploaded_file($_FILES['imagen']['tmp_name'])){
-		$imagen = $name.rand(0,1000).".png";
-		move_uploaded_file($_FILES['imagen']['tmp_name'], "../productos/".$imagen);
-	}
+    if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
+        $imagen = $name . rand(0, 1000) . ".png";
+        move_uploaded_file($_FILES['imagen']['tmp_name'], "../productos/" . $imagen);
+    }
 
-	$mysqli->query("INSERT INTO productos (name,price,imagen,id_categoria,oferta,descripcion) VALUES ('$name','$price','$imagen','$categoria','$oferta','$descargable')");
-	redir("?p=agregar_producto");
+    $mysqli->query("INSERT INTO productos (name,price,imagen,id_categoria,oferta,descripcion) VALUES ('$name','$price','$imagen','$categoria','$oferta','$descargable')");
+    redir("?p=agregar_producto");
 }
 
-if(isset($eliminar)){
-	$mysqli->query("DELETE FROM productos WHERE id = '$eliminar'");
-	redir("?p=agregar_producto");
+if (isset($eliminar)) {
+    $mysqli->query("DELETE FROM productos WHERE id = '$eliminar'");
+    redir("?p=agregar_producto");
 }
 
 
@@ -36,7 +36,7 @@ if(isset($eliminar)){
     </div>
     <div class="form-group">
         <label>Descripcion del producto</label>
-        <input class="form-control" type="text" name="descargable" placeholder="Descripcion del producto" maxlength="62"/>
+        <input class="form-control" type="text" name="descargable" placeholder="Descripcion del producto" maxlength="62" />
     </div>
     <div class="form-group">
         <label>Precio del producto</label>
@@ -47,8 +47,7 @@ if(isset($eliminar)){
     <label>Imagen del producto</label>
 
     <div class="form-group">
-        <input type="file" class="form-control" name="imagen" title="Imagen del producto"
-            placeholder="Imagen del producto" />
+        <input type="file" class="form-control" name="imagen" title="Imagen del producto" placeholder="Imagen del producto" />
     </div>
 
     <div class="form-group">
@@ -56,14 +55,14 @@ if(isset($eliminar)){
         <select name="categoria" required class="form-control">
             <option value="">Seleccione una categoria</option>
             <?php
-				$q = $mysqli->query("SELECT * FROM categorias ORDER BY categoria ASC");
+            $q = $mysqli->query("SELECT * FROM categorias ORDER BY categoria ASC");
 
-				while($r=mysqli_fetch_array($q)){
-					?>
-            <option value="<?=$r['id']?>"><?=$r['categoria']?></option>
+            while ($r = mysqli_fetch_array($q)) {
+            ?>
+                <option value="<?= $r['id'] ?>"><?= $r['categoria'] ?></option>
             <?php
-				}
-			?>
+            }
+            ?>
         </select>
 
     </div>
@@ -103,75 +102,69 @@ if(isset($eliminar)){
 
 <br>
 <div class="scrollmenu">
-    <table class="table table-striped text-center">
+    <table class="table table-bordered text-center">
 
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Descuento</th>
-            <th>Precio Total</th>
-            <th style="width: 20%">Imagen</th>
-            <th>Categoria</th>
-            <th>Acciones</th>
+        <tr class="bg-secondary text-light">
+            <th class="p-5">Producto</th>
+            <th class="p-5">Nombre</th>
+            <th class="p-5">Precio</th>
+            <th class="p-5">Descuento</th>
+            <th class="p-5">Precio Total</th>
+            <th class="p-5">Categoria</th>
+            <th class="p-5">Acciones</th>
         </tr>
 
         <?php
-		$prod = $mysqli->query("SELECT * FROM productos ORDER BY id DESC");
-		while($rp=mysqli_fetch_array($prod)){
-			$preciototal = 0;
+        $prod = $mysqli->query("SELECT * FROM productos ORDER BY id DESC");
+        while ($rp = mysqli_fetch_array($prod)) {
+            $preciototal = 0;
 
-			$cat = $mysqli->query("SELECT * FROM categorias WHERE id = '".$rp['id_categoria']."'");
+            $cat = $mysqli->query("SELECT * FROM categorias WHERE id = '" . $rp['id_categoria'] . "'");
 
-			if(mysqli_num_rows($cat)>0){
-				$rcat = mysqli_fetch_array($cat);
-				$categoria = $rcat['categoria'];
-			}else{
-				$categoria = "--";
-			}
+            if (mysqli_num_rows($cat) > 0) {
+                $rcat = mysqli_fetch_array($cat);
+                $categoria = $rcat['categoria'];
+            } else {
+                $categoria = "--";
+            }
 
-			if($rp['oferta']>0){
-				if(strlen($rp['oferta'])==1){
-					$desc = "0.0".$rp['oferta'];
-				}else{
-					$desc = "0.".$rp['oferta'];
-				}
+            if ($rp['oferta'] > 0) {
+                if (strlen($rp['oferta']) == 1) {
+                    $desc = "0.0" . $rp['oferta'];
+                } else {
+                    $desc = "0." . $rp['oferta'];
+                }
 
-				$preciototal = $rp['price'] -($rp['price'] * $desc);
-			}else{
-				$preciototal = $rp['price'];
-			}
+                $preciototal = $rp['price'] - ($rp['price'] * $desc);
+            } else {
+                $preciototal = $rp['price'];
+            }
 
-
-
-			?>
-        <tr>
-            <td><?=$rp['name']?></td>
-            <td><?=$rp['price']?></td>
-            <td>
-                <?php
-							if($rp['oferta']>0){
-								echo $rp['oferta']."% de Descuento";
-							}else{
-								echo "Sin descuento";
-							}
-						?>
-            </td>
-
-            <td><?=$preciototal?></td>
-
-            <td><img src="../productos/<?=$rp['imagen']?>" class="imagen_carro" /></td>
-            <td><?=$categoria?></td>
-            <td>
-
-                <!--<a style="color:#08f" href="?p=modificar_producto&id=<?=$rp['id']?>"><i class="fa fa-edit"></i></a>-->
-                &nbsp;
-                <a style="color:#08f" href="?p=agregar_producto&eliminar=<?=$rp['id']?>"><i class="fa fa-times"></i></a>
-
-            </td>
-        </tr>
+        ?>
+            <tr>
+                <td style="width: 10%"><img src="../productos/<?= $rp['imagen']; ?>" width="100%" /></td>
+                <td><?= $rp['name'] ?></td>
+                <td><?= $rp['price'] ?></td>
+                <td>
+                    <?php
+                    if ($rp['oferta'] > 0) {
+                        echo $rp['oferta'] . "% de Descuento";
+                    } else {
+                        echo "Sin descuento";
+                    }
+                    ?>
+                </td>
+                <td><?= $preciototal ?></td>
+                <td><?= $categoria ?></td>
+                <td>
+                    <a style="color:#08f" href="?p=modificar_producto&id=<?= $rp['id'] ?>"><i class="fa fa-edit"></i></a>
+                    &nbsp;
+                    <a style="color:#08f" href="?p=agregar_producto&eliminar=<?= $rp['id'] ?>"><i class="fa fa-times"></i></a>
+                </td>
+            </tr>
         <?php
-		}
-	?>
+        }
+        ?>
 
     </table>
 </div>

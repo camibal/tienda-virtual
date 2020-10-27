@@ -21,7 +21,8 @@ if(isset($modificar)){
 			<option <?php if($r['estado'] == 0) { echo "selected"; } ?> value="0">Iniciando</option>
 			<option <?php if($r['estado'] == 1) { echo "selected"; } ?> value="1">Preparando</option>
 			<option <?php if($r['estado'] == 2) { echo "selected"; } ?> value="2">Despachando</option>
-			<option <?php if($r['estado'] == 3) { echo "selected"; } ?> vlaue="3">Finalizado</option>
+			<option <?php if($r['estado'] == 3) { echo "selected"; } ?> value="3">Finalizado</option>
+			<!-- <option <?php if($r['estado'] == 4) { echo "selected"; } ?> vlaue="4">Finalizado</option> -->
 		</select>
 	</div>
 

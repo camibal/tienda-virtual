@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*font size*/
+
+.fz-40 {
+    font-size: 40px;
+}
+
+.fz-32 {
+    font-size: 32px;
+}
+
+.fz-18 {
+    font-size: 18px;
+}
+
+.fz-28 {
+    font-size: 28px;
+}
+
+.fz-14 {
+    font-size: 14px;
+}
+
+.fz-15 {
+    font-size: 10px;
+}
+
+/*font size*/
+
+/*inicio menu*/
+
+input#abrir-cerrar {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+.cerrar {
+    display: none;
+}
+
+#sidebar {
+    width: 0;
+}
+
+#contenido {
+    margin-left: 0;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .cerrar {
+    display: inline;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .abrir {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sidebar ul, .sidebar li {
+    padding: 0;
+    list-style: none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 100%;
+    min-width: 200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 100%;
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size: 1rem;
+}
+
+input#abrir-cerrar {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"], input#abrir-cerrar:checked~#contenido {
+    z-index: 200;
+    transition: margin-left .4s;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .cerrar {
+    display: inline;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .abrir {
+    display: none;
+}
+
+.bg_link_menu {
+    color: #000 !important;
+}
+
+.bg_link_menu:hover {
+    color: #000 !important;
+}
+
+.bg_link_menu_none {
+    color: #000 !important;
+}
+
+.bg_link_menu_none:hover {
+    background-color: #e7e8e8 !important;
+    color: #000 !important;
+}
+
+/*fin menu*/

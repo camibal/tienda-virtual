@@ -52,6 +52,7 @@ if(isset($eliminar)){
             <td><?=$r['id']?></td>
             <td><?=$r['categoria']?>
             <td>
+            <a style="color:#08f" href="?p=modificar_categoria&id=<?=$r['id']?>"><i class="fa fa-edit"></i></a>
                 <a style="color:#08f" href="?p=agregar_categoria&eliminar=<?=$r['id']?>"><i class="fa fa-times"></i></a>
             </td>
         </tr>

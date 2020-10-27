@@ -30,8 +30,11 @@ if (!isset($p)) {
 
 <body>
     <!-- navbar -->
+    <a name="lancha" id="lancha"></a>
     <nav class="navbar navbar-expand-md navbar-light bg-red">
-        <a class="navbar-brand w-logo" href="index.php"><img src="assets/images/index/logo.png" width="100%" alt=""></a>
+        <a class="navbar-brand w-logo ml-xl-5" href="index.php">
+            <img src="assets/images/index/logo.png" width="100%" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -85,7 +88,7 @@ if (!isset($p)) {
                 <button class="btn btn-secondary dropdown-toggle btn-dropdown mr-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?= nombre_cliente($_SESSION['id_cliente']) ?>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu dropdown-cerrar-sesion" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item text-dark text-center subir pt-3" href="index2.php?p=salir">
                         Cerrar Sesiòn
                     </a>
@@ -316,14 +319,14 @@ if (!isset($p)) {
     </div>
 
     <!-- boton flotante whatsapp -->
-    <!-- <a href="https://wa.me/573138986761?text=Hola, estoy interesado en tus productos" target="_blank">
-            <img src="assets/images/Whatsapp_1542396595-1024x1024.png" class="img_whatsapp" alt="">
-        </a> -->
+    <a href="https://wa.me/573138986761?text=Hola, estoy interesado en tus productos" class="btn_whatsapp" target="_blank">
+        <img src="assets/images/Whatsapp_1542396595-1024x1024.png" width="100%" alt="">
+    </a>
 
     <!-- modal instrucciones -->
-    <!-- <button type="button" class="btn_instrucciones" data-toggle="modal" data-target="#exampleModal">
-            ¿Como hacer mi pedido?
-        </button> -->
+    <button type="button" class="btn btn-success btn-sm btn_instrucciones" data-toggle="modal" data-target="#exampleModal">
+        ¿Como hacer mi pedido?
+    </button>
 
     <!-- Modal instrucciones -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -388,6 +391,9 @@ if (!isset($p)) {
         </div>
     </div>
 
+    <!-- btn volver arriba -->
+    <a href="#lancha" class="btn-top"><i class="fa fa-arrow-circle-up fz-32 text-secondary"></i></a>
+
     <!-- footer -->
     <footer class="bg-dark text-light">
         <div class="container-fluid mt-5">
@@ -409,6 +415,7 @@ if (!isset($p)) {
         </div>
     </footer>
 
+    <!-- scripts -->
     <script type="text/javascript">
         function minimizer() {
 

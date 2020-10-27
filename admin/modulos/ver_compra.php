@@ -51,20 +51,20 @@ Estado: <?= estado($r['estado']) ?><br>
             $montototal = $rp['monto'] * $rp['cantidad'];
         ?>
             <tr>
-                <td style="width: 20%">
-                    <img src="../productos/<?= $imagen ?>" width="40%" alt=""><br>
+                <td class="p-6" style="width: 20%">
+                    <img src="../productos/<?= $imagen ?>" class="img-admin-ver-producto" alt=""><br>
                     <!-- <?= $id_img ?> -->
                 </td>
-                <td>
+                <td class="p-6">
                     <?= $nombre_producto ?>
                 </td>
-                <td>
+                <td class="p-6">
                     <div><?= $rp['cantidad'] ?></div>
                 </td>
-                <td>
+                <td class="p-6">
                     <div>$<?= $rp['monto'] ?></div>
                 </td>
-                <td>
+                <td class="p-6">
                     <div>$<?= $montototal ?></div>
                 </td>
             </tr>

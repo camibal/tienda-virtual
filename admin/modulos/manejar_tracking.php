@@ -32,7 +32,7 @@ if(isset($eliminar)){
             <th>Celular</th>
             <th>Fecha</th>
             <th>Monto</th>
-            <th>Status</th>
+            <th>Estado</th>
             <th>Acciones</th>
         </tr>
         <?php

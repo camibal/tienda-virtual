@@ -29,6 +29,10 @@ if (!isset($p)) {
 </head>
 
 <body>
+    <!-- ancla -->
+    <a name="lancha" id="lancha"></a>
+
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-red">
         <a class="navbar-brand w-logo" href="index.php"><img src="assets/images/index/logo.png" width="100%" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -175,20 +179,18 @@ if (!isset($p)) {
         </form>
 
     </div>
+    <!-- boton flotante whatsapp -->
+    <a href="https://wa.me/573138986761?text=Hola, estoy interesado en tus productos" class="btn_whatsapp" target="_blank">
+        <img src="assets/images/Whatsapp_1542396595-1024x1024.png" width="100%" alt="">
+    </a>
 
-    <!-- boton flotante whatsapp -->
-    <!-- <a href="https://wa.me/573138986761?text=Hola, estoy interesado en tus productos" target="_blank">
-        <img src="assets/images/Whatsapp_1542396595-1024x1024.png" class="img_whatsapp" alt="">
-    </a> -->
-    <!-- boton flotante whatsapp -->
     <!-- modal instrucciones -->
-    <!-- <button type="button" class="btn_instrucciones" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-success btn-sm btn_instrucciones" data-toggle="modal" data-target="#exampleModal">
         ¿Como hacer mi pedido?
-    </button> -->
+    </button>
 
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <!-- Modal instrucciones -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content tamaño_index_modal" style="box-shadow: 1px -4px 15px 10px #fff; border: none;">
                 <div style="background-color: #999999;">
@@ -199,8 +201,7 @@ if (!isset($p)) {
                         <div class="container p-4" style="border: #fff5 2px dashed">
                             <div class="row text-center">
                                 <div class="col-sm-12 col-md-12">
-                                    <img src="assets/images/LOGO-GEEK-CODE.jpg" width="20%" alt=""
-                                        class="tamaño_imagen_index_modal">
+                                    <img src="assets/images/LOGO-GEEK-CODE.jpg" width="20%" alt="" class="tamaño_imagen_index_modal">
                                 </div>
                             </div>
                             <div class="row justify-content-center mt-4">
@@ -249,10 +250,10 @@ if (!isset($p)) {
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- </div> -->
-    <!-- Modal -->
-    <!-- modal instrucciones -->
+    </div>
+
+    <!-- btn volver arriba -->
+    <a href="#lancha" class="btn-top"><i class="fa fa-arrow-circle-up fz-32 text-secondary"></i></a>
     <!-- footer -->
     <footer class="bg-secondary text-light">
         <div class="container-fluid mt-5">

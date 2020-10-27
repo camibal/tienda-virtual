@@ -29,8 +29,10 @@ if (!isset($p)) {
 </head>
 
 <body>
-    <!-- navbar -->
+    <!-- ancla -->
     <a name="lancha" id="lancha"></a>
+
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-red">
         <a class="navbar-brand w-logo ml-xl-5" href="index.php">
             <img src="assets/images/index/logo.png" width="100%" alt="">

@@ -25,7 +25,7 @@ if (isset($agregar) && isset($cant)) {
     // redir("?p=principal");
 }
 ?>
-<div class="d-flex justify-content-center mt-5">
+<div class="d-flex justify-content-center">
     <div class="container-principal w-75">
         <h2 class="text-center h1_font_family">ULTIMOS PRODUCTOS</h2>
         <div class="row mt-5">

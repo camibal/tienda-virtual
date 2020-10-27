@@ -33,7 +33,7 @@ if (isset($busq) && isset($cat)) {
   $q = $mysqli->query("SELECT * FROM productos ORDER BY id DESC");
 }
 ?>
-<h2 class="text-center mt-5 h1_font_family">PRODUCTOS</h2>
+<h2 class="text-center h1_font_family">PRODUCTOS</h2>
 <!--/.Carousel Wrapper-->
 <form method="post" action="">
   <div class="row align-items-center mb-5">

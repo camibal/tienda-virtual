@@ -2,12 +2,6 @@
 	font-family: "Oswald", sans-serif;
 }
 
-.position-nav {
-	position: fixed !important;
-	top: 0 !important;
-	z-index: 10 !important;
-}
-
 .bg_orange {
 	background-color: #000;
 }
@@ -287,7 +281,7 @@ a {
 	min-height: 64vh;
 }
 
-.container-miscompras{
+.container-miscompras {
 	min-height: 64vh;
 }
 

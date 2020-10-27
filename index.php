@@ -16,8 +16,8 @@ if (!isset($p)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="css/estilo.css" />
     <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/estilo.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style2.css" />
@@ -30,7 +30,7 @@ if (!isset($p)) {
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-danger position-nav">
+    <nav class="navbar navbar-expand-md navbar-light bg-red">
         <a class="navbar-brand w-logo" href="index.php"><img src="assets/images/index/logo.png" width="100%" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -82,7 +82,7 @@ if (!isset($p)) {
         if (isset($_SESSION['id_cliente'])) {
         ?>
             <div class="dropdown d-none d-md-block">
-                <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle btn-dropdown mr-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?= nombre_cliente($_SESSION['id_cliente']) ?>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -248,13 +248,13 @@ if (!isset($p)) {
 
     <!-- Carrito de compras -->
     <div class="carritot" onclick="minimizer()">
-        <h3 style="font-size: 18px;">Carrito de compra</h3>
+        <h3 class="fz-18">Carrito de compra</h3>
         <input type="hidden" id="minimized" value="0" />
     </div>
 
     <div class="carritob">
-        <table class="table table-hover">
-            <tr style="background-color: #999999; color: #000;">
+        <table class="table table-bordered">
+            <tr class="bg-secondary text-light">
                 <th>Producto</th>
                 <th>Cantidad</th>
                 <th>Precio </th>

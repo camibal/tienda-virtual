@@ -56,7 +56,7 @@ if(isset($finalizar)){
 ?>
 <div class="d-flex justify-content-center">
     <div class="container-carrito text-center w-75">
-        <h1 class="h1_font_family text-center">CARRO DE COMPRAS</h1>
+        <h2 class="h1_font_family text-center">CARRO DE COMPRAS</h2>
         <br><br>
         <div class="scrollmenu">
             <table class="table table-hover">

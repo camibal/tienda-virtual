@@ -16,8 +16,8 @@ if (!isset($p)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="css/estilo.css" />
     <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/estilo.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style2.css" />
@@ -29,7 +29,7 @@ if (!isset($p)) {
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-danger position-nav">
+    <nav class="navbar navbar-expand-md navbar-light bg-red">
         <a class="navbar-brand w-logo" href="index.php"><img src="assets/images/index/logo.png" width="100%" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -114,8 +114,8 @@ if (!isset($p)) {
 
     <div class="carritob">
 
-        <table class="table table-hover text-center">
-            <tr style="background-color: #999999; color: #000;">
+        <table class="table table-bordered">
+            <tr class="bg-secondary text-light">
                 <th>Producto</th>
                 <th>Cantidad</th>
                 <th>Precio </th>

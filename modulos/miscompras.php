@@ -5,7 +5,7 @@ if(mysqli_num_rows($s)>0){
 	?>
 <div class="d-flex justify-content-center">
     <div class="container-miscompras w-75">
-        <h1 class="h1_font_family text-center">MIS COMPRAS</h1>
+        <h2 class="h1_font_family text-center">MIS COMPRAS</h2>
         <div class="scrollmenu">
             <table class="table table-hover mt-5">
                 <tr class="bg-secondary text-light text-center">

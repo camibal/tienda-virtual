@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
 	<div class="container-ofertas w-75">
-		<h2 class="text-center mt-5 h1_font_family">OFERTAS</h2>
+		<h2 class="text-center h1_font_family">OFERTAS</h2>
 		<div class="row align-items-center mb-5">
 			<div class="col-md-8">
 

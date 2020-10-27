@@ -29,7 +29,7 @@ if(!isset($_SESSION['id'])){
     <title>Admin Panel</title>
     <link rel="shortcut icon" href="../../assets/images/LOGO-GEEK-CODE.jpg">
   </head>
-  <body style="background: #cc3300;color:#fff">
+  <body style="background: #e1102e;color:#fff">
      <center>
         <form style="padding-top:10%;" method="post" action="">
           <div class="centrar_login">

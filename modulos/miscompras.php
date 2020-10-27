@@ -4,11 +4,11 @@ $s = $mysqli->query("SELECT * FROM compra WHERE id_cliente = '".$_SESSION['id_cl
 if(mysqli_num_rows($s)>0){
 	?>
 <div class="d-flex justify-content-center">
-    <div class="container-miscompras" style="font-size: 16px; width: 85%">
+    <div class="container-miscompras w-75">
         <h1 class="h1_font_family text-center">MIS COMPRAS</h1>
         <div class="scrollmenu">
-            <table class="table table-hover mt-5" style="font-size: 16px;">
-                <tr style="background-color: #999999; color: #fff; text-align: center;">
+            <table class="table table-hover mt-5">
+                <tr class="bg-secondary text-light text-center">
                     <th>Fecha</th>
                     <th>Monto</th>
                     <td>Estado</td>

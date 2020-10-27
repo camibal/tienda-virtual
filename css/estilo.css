@@ -2,7 +2,7 @@
 	font-family: "Oswald", sans-serif;
 }
 
-.position-nav{
+.position-nav {
 	position: fixed !important;
 	top: 0 !important;
 	z-index: 10 !important;
@@ -279,8 +279,16 @@ a {
 	width: 50%;
 }
 
-.btn-agregar{
+.btn-agregar {
 	border-radius: 30px !important;
+}
+
+.container-carrito {
+	min-height: 64vh;
+}
+
+.container-miscompras{
+	min-height: 64vh;
 }
 
 @media (max-width: 1279px) {

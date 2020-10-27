@@ -21,14 +21,14 @@ if (isset($agregar) && isset($cant)) {
         $q = $mysqli->query("INSERT INTO carro (id_cliente,id_producto,cant) VALUES ($id_cliente,$idp,$cant)");
     }
 
-    alert("Se ha agregado al carro de compras", 1, 'principal');
-    //redir("?p=principal");
+    // echo "<script>alert('Se ha agregado al carro de compras')</script>";
+    // redir("?p=principal");
 }
 ?>
 <div class="d-flex justify-content-center mt-5">
-    <div class="container-principal" style="width: 70%">
-        <h1 class="text-center h1_font_family">ULTIMOS PRODUCTOS</h1><br><br>
-        <div class="row">
+    <div class="container-principal w-75">
+        <h2 class="text-center h1_font_family">ULTIMOS PRODUCTOS</h2>
+        <div class="row mt-5">
             <?php
             $q = $mysqli->query("SELECT * FROM productos WHERE oferta = 0 ORDER BY id DESC LIMIT 4");
 
@@ -57,12 +57,11 @@ if (isset($agregar) && isset($cant)) {
                         <?php
                         } else {
                         ?>
-                            <span class="precio2"><br>$<?= $r['price'] ?></span>
+                            <span class="precio2">$<?= $r['price'] ?></span>
                         <?php
                         }
                         ?>
                     </div>
-                    <!-- <input type="number" id="cant<?= $r['id'] ?>" name="cant" class="cant pull-right" style="width: 100%;" value="1" /> -->
                     <div class="row justify-content-center align-items-center mt-2">
                         <button class="btn btn-danger btn-sm btn-agregar" onclick="agregar_carro('<?= $r['id'] ?>');">AGREGAR</button>
                     </div>
@@ -71,8 +70,8 @@ if (isset($agregar) && isset($cant)) {
             }
             ?>
         </div>
-        <h1 class="text-center mt-5 h1_font_family">ULTIMAS OFERTAS</h1><br><br>
-        <div class="row">
+        <h2 class="text-center mt-5 h1_font_family">ULTIMAS OFERTAS</h2>
+        <div class="row mt-5">
             <?php
             $q = $mysqli->query("SELECT * FROM productos WHERE oferta>0 ORDER BY id DESC LIMIT 4");
 
@@ -93,13 +92,12 @@ if (isset($agregar) && isset($cant)) {
 
             ?>
                 <div class="producto">
-                    <div><img class="img_producto" src="productos/<?= $r['imagen'] ?>" /></div><br>
+                    <div><img class="img_producto" src="productos/<?= $r['imagen'] ?>" /></div>
                     <div class="name_producto"><?= $r['name'] ?></div>
                     <div class="row justify-content-center align-items-center">
                         <del class="precio_oferta">$<?= $r['price'] ?></del>
                         <span class="precio2">$<?= $preciototal ?></span>
                     </div>
-                    <!-- <input type="number" id="cant<?= $r['id'] ?>" name="cant" class="cant pull-right input_cantidad_principal" style="width: 90%" value="1" /> -->
                     <div class="row justify-content-center align-items-center">
                         <button class="btn btn-danger btn-sm btn-agregar mt-3" onclick="agregar_carro('<?= $r['id'] ?>');">AGREGAR</button>
                     </div>

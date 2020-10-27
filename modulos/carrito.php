@@ -55,13 +55,13 @@ if(isset($finalizar)){
 }
 ?>
 <div class="d-flex justify-content-center">
-    <div class="container-carrito text-center" style="font-size: 16px; width: 85%">
+    <div class="container-carrito text-center w-75">
         <h1 class="h1_font_family text-center">CARRO DE COMPRAS</h1>
         <br><br>
         <div class="scrollmenu">
             <table class="table table-hover">
-                <tr style="background-color: #999999; color: #fff; text-align: center;">
-                    <th style="width: 20%">Producto</th>
+                <tr class="bg-secondary text-light text-center">
+                    <th>Producto</th>
                     <th>Nombre del producto</th>
                     <th>Cantidad</th>
                     <th>Precio unidad</th>

@@ -78,7 +78,7 @@ if (!isset($p)) {
         if (isset($_SESSION['id_cliente'])) {
         ?>
             <div class="dropdown d-none d-md-block">
-                <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle btn-dropdown mr-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?= nombre_cliente($_SESSION['id_cliente']) ?>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

@@ -1,4 +1,3 @@
-<h1 class="text-center mt-5 h1_font_family">PRODUCTOS</h1><br><br>
 <?php
 check_user("productos");
 
@@ -18,8 +17,8 @@ if (isset($agregar) && isset($cant)) {
     $q = $mysqli->query("INSERT INTO carro (id_cliente,id_producto,cant) VALUES ($id_cliente,$idp,$cant)");
   }
 
-  echo "<script>alert('Se ha agregado al carro de compras')</script>";
-  redir("?p=productos");
+  // echo "<script>alert('Se ha agregado al carro de compras')</script>";
+  // redir("?p=productos");
 }
 
 if (isset($busq) && isset($cat)) {
@@ -34,7 +33,7 @@ if (isset($busq) && isset($cat)) {
   $q = $mysqli->query("SELECT * FROM productos ORDER BY id DESC");
 }
 ?>
-
+<h2 class="text-center mt-5 h1_font_family">PRODUCTOS</h2>
 <!--/.Carousel Wrapper-->
 <form method="post" action="">
   <div class="row align-items-center mb-5">
@@ -42,7 +41,7 @@ if (isset($busq) && isset($cat)) {
 
     </div>
     <div class="col-md-4">
-      <select id="categoria" name="cat" onchange="redir_cat()" class="form-control" style="font-size: 16px;">
+      <select id="categoria" name="cat" onchange="redir_cat()" class="form-control">
         <option value="">Filtra por categoria</option>
         <?php
         $cats = $mysqli->query("SELECT * FROM categorias ORDER BY categoria ASC");
@@ -66,7 +65,7 @@ if (isset($cat)) {
 }
 ?>
 <div class="d-flex justify-content-center">
-  <div class="container-productos mt-5" style="width: 70%">
+  <div class="container-productos mt-5 w-75">
     <div class="row">
       <?php
       while ($r = mysqli_fetch_array($q)) {

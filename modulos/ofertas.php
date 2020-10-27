@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
-	<div class="container-ofertas" style="width: 70%">
-		<h1 class="text-center mt-5 h1_font_family">OFERTAS</h1><br><br>
+	<div class="container-ofertas w-75">
+		<h2 class="text-center mt-5 h1_font_family">OFERTAS</h2>
 		<div class="row align-items-center mb-5">
 			<div class="col-md-8">
 
@@ -46,8 +46,8 @@
 					$q = $mysqli->query("INSERT INTO carro (id_cliente,id_producto,cant) VALUES ($id_cliente,$idp,$cant)");
 				}
 
-				alert("Se ha agregado al carro de compras", 1, 'productos');
-				//redir("?p=productos");
+				// echo "<script>alert('Se ha agregado al carro de compras')</script>";
+				// redir("?p=ofertas");
 			}
 
 			if (isset($cat)) {

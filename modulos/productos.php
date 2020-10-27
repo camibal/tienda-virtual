@@ -18,8 +18,8 @@ if (isset($agregar) && isset($cant)) {
     $q = $mysqli->query("INSERT INTO carro (id_cliente,id_producto,cant) VALUES ($id_cliente,$idp,$cant)");
   }
 
-  alert("Se ha agregado al carro de compras", 1, 'productos');
-  //redir("?p=productos");
+  echo "<script>alert('Se ha agregado al carro de compras')</script>";
+  redir("?p=productos");
 }
 
 if (isset($busq) && isset($cat)) {

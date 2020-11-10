@@ -107,7 +107,7 @@ if (isset($finalizar)) {
 
 				?>
 					<tr>
-						<td style="width: 10%"><img src="productos/<?= $imagen_producto ?>" class="w-100" /></td>
+						<td style="width: 10%"><img src="assets/images/productos/<?= $imagen_producto ?>" class="w-100" /></td>
 						<td><?= $nombre_producto ?></td>
 						<td><?= $cantidad ?></td>
 						<td>$<?= $precio_unidad ?></td>

@@ -47,7 +47,7 @@ if (isset($agregar) && isset($cant)) {
                 }
             ?>
                 <div class="producto">
-                    <div><img class="img_producto" src="productos/<?= $r['imagen'] ?>" /></div>
+                    <div><img class="img_producto" src="assets/images/productos/<?= $r['imagen'] ?>" /></div>
                     <div class="name_producto"><?= $r['name'] ?></div>
                     <div class="row justify-content-center align-items-center">
                         <?php
@@ -92,7 +92,7 @@ if (isset($agregar) && isset($cant)) {
 
             ?>
                 <div class="producto">
-                    <div><img class="img_producto" src="productos/<?= $r['imagen'] ?>" /></div>
+                    <img class="img_producto" src="assets/images/productos/<?= $r['imagen'] ?>" />
                     <div class="name_producto"><?= $r['name'] ?></div>
                     <div class="row justify-content-center align-items-center">
                         <del class="precio_oferta">$<?= $r['price'] ?></del>

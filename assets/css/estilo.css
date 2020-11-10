@@ -315,6 +315,11 @@ a {
 	background-color: transparent;
 }
 
+.img-slider {
+	/* width: 100% !important; */
+	height: 15rem !important;
+}
+
 @media (max-width: 1279px) {
 	.producto {
 		width: 47%;

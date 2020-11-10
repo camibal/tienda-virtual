@@ -5,17 +5,16 @@ if (isset($enviar)) {
     $name = clear($name);
     $price = clear($price);
     $oferta = clear($oferta);
-    $descargable = clear($descargable);
     $categoria = clear($categoria);
 
     $imagen = "";
 
     if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
         $imagen = $name . rand(0, 1000) . ".png";
-        move_uploaded_file($_FILES['imagen']['tmp_name'], "../productos/" . $imagen);
+        move_uploaded_file($_FILES['imagen']['tmp_name'], "../assets/images/productos/" . $imagen);
     }
 
-    $mysqli->query("INSERT INTO productos (name,price,imagen,id_categoria,oferta,descripcion) VALUES ('$name','$price','$imagen','$categoria','$oferta','$descargable')");
+    $mysqli->query("INSERT INTO productos (name,price,imagen,id_categoria,oferta) VALUES ('$name','$price','$imagen','$categoria','$oferta')");
     redir("?p=agregar_producto");
 }
 
@@ -33,10 +32,6 @@ if (isset($eliminar)) {
     <div class="form-group">
         <label>Nombre del producto</label>
         <input type="text" class="form-control" name="name" placeholder="Nombre del producto" />
-    </div>
-    <div class="form-group">
-        <label>Descripcion del producto</label>
-        <input class="form-control" type="text" name="descargable" placeholder="Descripcion del producto" maxlength="62" />
     </div>
     <div class="form-group">
         <label>Precio del producto</label>
@@ -142,9 +137,9 @@ if (isset($eliminar)) {
 
         ?>
             <tr>
-                <td style="width: 10%"><img src="../productos/<?= $rp['imagen']; ?>" width="100%" /></td>
+                <td style="width: 10%"><img src="../assets/images/productos/<?= $rp['imagen']; ?>" width="75%" /></td>
                 <td><?= $rp['name'] ?></td>
-                <td><?= $rp['price'] ?></td>
+                <td>$<?= $rp['price'] ?></td>
                 <td>
                     <?php
                     if ($rp['oferta'] > 0) {
@@ -154,7 +149,7 @@ if (isset($eliminar)) {
                     }
                     ?>
                 </td>
-                <td><?= $preciototal ?></td>
+                <td>$<?= $preciototal ?></td>
                 <td><?= $categoria ?></td>
                 <td>
                     <a style="color:#08f" href="?p=modificar_producto&id=<?= $rp['id'] ?>"><i class="fa fa-edit"></i></a>

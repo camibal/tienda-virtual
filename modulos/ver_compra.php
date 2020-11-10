@@ -16,7 +16,6 @@ if (mysqli_num_rows($s) > 0) {
 
 ?>
     <div class="w-75 m-auto">
-        <!-- <h3 class="viendo_compra">Viendo compra #<span style="color:#08f"><?= $r['id'] ?></span></h3> -->
         <h1 class="text-center">MI PEDIDO</h1>
         <div class="row mt-5">
             <i class="fa fa-calendar text_orange ml-3"></i>&nbsp &nbsp Fecha: <?= fecha($r['fecha']) ?>
@@ -49,7 +48,7 @@ if (mysqli_num_rows($s) > 0) {
                     $imagen_producto = $rpro['imagen'];
                 ?>
                     <tr>
-                        <td style="width: 10%"><img src="productos/<?= $imagen_producto ?>" class="w-100" /></td>
+                        <td style="width: 10%"><img src="assets/images/productos/<?= $imagen_producto ?>" class="w-100" /></td>
                         <td><?= $nombre_producto ?></td>
                         <td><?= $rp['cantidad'] ?></td>
                         <td>$<?= $rp['monto'] ?></td>
@@ -75,6 +74,6 @@ if (mysqli_num_rows($s) > 0) {
 <?php
 
 } else {
-    alert("Ha ocurrido un error");
+    echo "<script>alert('Ha ocurrido un error')</script>";
     redir("?p=miscompras");
 } ?>-->

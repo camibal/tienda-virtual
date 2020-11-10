@@ -83,7 +83,7 @@ if (isset($cat)) {
         }
       ?>
         <div class="producto mt-5">
-          <div><img class="img_producto" src="productos/<?= $r['imagen'] ?>" /></div>
+          <div><img class="img_producto" src="assets/images/productos/<?= $r['imagen'] ?>" /></div>
           <div class="name_producto"><?= $r['name'] ?></div>
 
           <div class="row justify-content-center align-items-center">

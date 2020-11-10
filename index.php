@@ -141,22 +141,16 @@ if (!isset($p)) {
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img1.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img2.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img3.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img4.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img5.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img6.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img7.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img8.jpg" alt="First slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -181,22 +175,16 @@ if (!isset($p)) {
             <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img9.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img10.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img11.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img12.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img13.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img14.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img15.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img16.jpg" alt="First slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
@@ -221,22 +209,16 @@ if (!isset($p)) {
             <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img17.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img18.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img19.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img20.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
-                        <img class="img-slider p-2" src="https://pbs.twimg.com/media/EZs8T_TXQAIPsTf.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img21.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img1.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img2.jpg" alt="First slide">
+                        <img class="img-slider p-2" src="assets/images/index/img3.jpg" alt="First slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
